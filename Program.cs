@@ -14,19 +14,19 @@ class Program
         //Console.WriteLine(N);
         //Console.WriteLine(K);
 
-        for (int i = 1; i < N-K; i++)
+        for (int i = K; i < N-K; i++)
         {
             int sum = 0;
 
             sum += int.Parse(population[i]);
             //Console.Write(population[i] + "+");
 
-            for (int j = 0; j < K; j++)
+            for (int j = 1; j < K+1; j++)
             {
-                sum += int.Parse(population[i+1]);
-                //Console.Write(population[i+1] + "+");
-                sum += int.Parse(population[i-1]);
-                //Console.Write(population[i-1] + "+");
+                sum += int.Parse(population[i+j]);
+                //Console.Write(population[i+j] + "+");
+                sum += int.Parse(population[i-j]);
+                //Console.Write(population[i-j] + "+");
             }
 
             //Console.WriteLine(" = " + sum);
